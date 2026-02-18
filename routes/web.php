@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\CarController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +23,9 @@ Route::get('/blog', [PostController::class, 'index'])->name('blog.index');
 
 // Blog routes
 Route::resource('posts', PostController::class);
+
+// Cars routes
+Route::resource('cars', CarController::class);
 
 Auth::routes();
 

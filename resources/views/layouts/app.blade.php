@@ -39,6 +39,9 @@
                         <li class="nav-item">
                             <a class="nav-link {{ request()->routeIs('blog.*') || request()->routeIs('posts.*') ? 'active' : '' }}" href="{{ route('blog.index') }}">Blog</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('cars.*') ? 'active' : '' }}" href="{{ route('cars.index') }}">Cars</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -97,6 +100,7 @@
                         <ul class="list-unstyled">
                             <li class="mb-2"><a href="{{ route('home') }}" class="text-muted text-decoration-none">Home</a></li>
                             <li class="mb-2"><a href="{{ route('blog.index') }}" class="text-muted text-decoration-none">Blog</a></li>
+                            <li class="mb-2"><a href="{{ route('cars.index') }}" class="text-muted text-decoration-none">Cars</a></li>
                             @auth
                                 <li class="mb-2"><a href="{{ route('posts.create') }}" class="text-muted text-decoration-none">Write Post</a></li>
                             @endauth
